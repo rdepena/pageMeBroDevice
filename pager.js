@@ -26,17 +26,17 @@ var printMessage = function (from, message) {
             currentLine--;
         }
      }
-}
+};
 
 var printDate = function () {
     var time = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
     lcd.cursor(0,0).print(time);
-}
+};
 
 var dateLoop = function () {
     printDate();
     setTimeout(dateLoop, 1000);
-}
+};
 
 board.on("ready", function() {
 
